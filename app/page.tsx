@@ -1,6 +1,7 @@
 "use client"
 
 import { ExternalLink, Github, Linkedin, Mail, Shield, Code2, Zap } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Portfolio() {
   const skills = {
@@ -72,7 +73,7 @@ export default function Portfolio() {
           <div className="text-xl font-bold text-primary">
             {"<"}MH{"/>"}
           </div>
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6 text-sm items-center">
             <a href="#about" className="hover:text-primary transition-colors">
               About
             </a>
@@ -85,6 +86,7 @@ export default function Portfolio() {
             <a href="#contact" className="hover:text-primary transition-colors">
               Contact
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
@@ -97,7 +99,7 @@ export default function Portfolio() {
               <Shield size={32} />
               <span className="text-lg font-semibold">CYBERSECURITY SPECIALIST</span>
             </div>
-            <h1 className="text-5xl sm:text-7xl font-bold text-white leading-tight">Mohamed Hathim</h1>
+            <h1 className="text-5xl sm:text-7xl font-bold text-foreground leading-tight">Mohamed Hathim</h1>
             <p className="text-xl sm:text-2xl text-muted-foreground">
               Cybersecurity Researcher | Full-Stack Developer | Exploit Developer | Malware Analyst
             </p>
@@ -139,7 +141,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12">About Me</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">About Me</h2>
 
           <div className="space-y-6 text-muted-foreground">
             <p className="text-lg leading-relaxed">
@@ -188,7 +190,7 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12">Technical Proficiency</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">Technical Proficiency</h2>
 
           <div className="grid md:grid-cols-2 gap-12">
             {Object.entries(skills).map(([category, items]) => (
@@ -217,7 +219,7 @@ export default function Portfolio() {
           </div>
 
           <div className="mt-12 pt-12 border-t border-border">
-            <h3 className="text-xl font-semibold text-white mb-6">Certifications</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Certifications</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {certifications.map((cert) => (
                 <div
@@ -236,7 +238,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">Featured Projects</h2>
           <p className="text-muted-foreground mb-12">
             A curated selection of my most impactful work across cybersecurity, web development, and desktop
             applications
@@ -261,7 +263,7 @@ export default function Portfolio() {
                         className="group p-6 border border-border rounded-lg bg-card hover:bg-card/50 hover:border-primary transition-all duration-300"
                       >
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-xl font-semibold text-white group-hover:text-primary transition-colors">
+                          <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                             {project.title}
                           </h3>
                           <ExternalLink
@@ -333,7 +335,7 @@ export default function Portfolio() {
       {/* Research Section */}
       <section className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12">Research Focus</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">Research Focus</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -368,7 +370,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl font-bold text-white">Let's Connect</h2>
+          <h2 className="text-4xl font-bold text-foreground">Let's Connect</h2>
           <p className="text-lg text-muted-foreground">
             Interested in collaborating on cybersecurity research, open-source security tools, or secure applications?
           </p>
