@@ -19,13 +19,12 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Secure E-Commerce Platform",
-      description: "Full-stack solution with advanced security features, 2FA, and PCI DSS compliance",
+      title: "Python Chat Server with CustomTkinter",
+      description: "A professional and feature-rich Python chat server application built with the CustomTkinter framework. This project provides real-time server monitoring, secure messaging, and an intuitive interface to manage connected users. ",
       features: ["Multi-layer Authentication", "2FA Implementation", "PCI DSS Compliance", "Real-time Fraud Detection"],
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe API"],
-      tags: ["Security", "Full-Stack"],
-      link: "https://github.com/MH786-coder/secure-ecommerce",
-      category: "Web Development",
+      tech: ["Python", "CustomTkinter", "PyQt5", "SQLite", "PyQt5"],
+      tags: ["Security"],
+      link: "https://github.com/SNAassaignment/ChatServerApp"
     },
     {
       title: "Advanced Malware Analysis Toolkit",
@@ -33,8 +32,7 @@ export default function Portfolio() {
       features: ["Dynamic Analysis Engine", "Static Analysis Module", "Behavioral Detection", "YARA Rule Generation"],
       tech: ["Python", "Ghidra", "Cuckoo Sandbox", "YARA"],
       tags: ["Malware", "Analysis"],
-      link: "https://github.com/MH786-coder/malware-toolkit",
-      category: "Cybersecurity",
+      link: "https://github.com/SNAassaignment/MalwareAnalysisTool"
     },
     {
       title: "Exploit Development Framework",
@@ -42,8 +40,7 @@ export default function Portfolio() {
       features: ["Fuzzing Modules", "ROP Chain Generator", "Shellcode Development", "Exploit Mitigation Bypass"],
       tech: ["Python", "C++", "Immunity Debugger", "Pwntools"],
       tags: ["Exploit", "Development"],
-      link: "https://github.com/MH786-coder/exploit-framework",
-      category: "Cybersecurity",
+      link: "https://github.com/SNAassaignment/ExploitDevelopmentFramework"
     },
     {
       title: "System Security Monitor",
@@ -51,8 +48,7 @@ export default function Portfolio() {
       features: ["Real-time Monitoring", "Process Analysis", "Network Inspection", "Automated Response"],
       tech: ["C++", "Qt Framework", "Windows API", "Linux Kernel"],
       tags: ["Desktop", "Security"],
-      link: "https://github.com/MH786-coder/system-monitor",
-      category: "Desktop Applications",
+      link: "https://github.com/SNAassaignment/system-monitor"
     },
   ]
 
@@ -86,7 +82,6 @@ export default function Portfolio() {
             <a href="#contact" className="hover:text-primary transition-colors">
               Contact
             </a>
-            <ThemeToggle />
           </div>
         </div>
       </nav>
@@ -101,13 +96,12 @@ export default function Portfolio() {
             </div>
             <h1 className="text-5xl sm:text-7xl font-bold text-foreground leading-tight">Mohamed Hathim</h1>
             <p className="text-xl sm:text-2xl text-muted-foreground">
-              Cybersecurity Researcher | Full-Stack Developer | Exploit Developer | Malware Analyst
+              🛡️ Ethical Hacker | 🧠 Cybersecurity Researcher | 💻 Full-Stack Web Developer
             </p>
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Multi-disciplinary technology expert specializing in building secure, scalable solutions across
-            cybersecurity, web development, and desktop applications with a security-first approach.
+            Passionate about securing digital systems and building secure, scalable web app.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -245,76 +239,69 @@ export default function Portfolio() {
           </p>
 
           <div className="space-y-8">
-            {["Cybersecurity", "Web Development", "Desktop Applications"].map((category) => (
-              <div key={category}>
-                <h3 className="text-lg font-semibold text-primary mb-6 flex items-center gap-2">
-                  <Shield size={18} />
-                  {category}
-                </h3>
-                <div className="grid gap-6">
-                  {projects
-                    .filter((p) => p.category === category)
-                    .map((project, idx) => (
-                      <a
-                        key={idx}
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group p-6 border border-border rounded-lg bg-card hover:bg-card/50 hover:border-primary transition-all duration-300"
-                      >
-                        <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                            {project.title}
-                          </h3>
-                          <ExternalLink
-                            size={20}
-                            className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0"
-                          />
-                        </div>
+            <div>
+              <div className="grid gap-6">
+                {projects
+                  .map((project, idx) => (
+                    <a
+                      key={idx}
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group p-6 border border-border rounded-lg bg-card hover:bg-card/50 hover:border-primary transition-all duration-300"
+                    >
+                      <div className="flex items-start justify-between mb-3">
+                        <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        <ExternalLink
+                          size={20}
+                          className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0"
+                        />
+                      </div>
 
-                        <p className="text-muted-foreground mb-4">{project.description}</p>
+                      <p className="text-muted-foreground mb-4">{project.description}</p>
 
-                        <div className="mb-4">
-                          <p className="text-xs text-primary font-semibold mb-2">KEY FEATURES:</p>
-                          <div className="flex flex-wrap gap-2">
-                            {project.features.map((feature) => (
-                              <span key={feature} className="text-xs text-muted-foreground">
-                                • {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="mb-4">
-                          <p className="text-xs text-primary font-semibold mb-2">TECH STACK:</p>
-                          <div className="flex flex-wrap gap-2">
-                            {project.tech.map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-2 py-1 text-xs bg-primary/5 text-primary/80 rounded border border-primary/20"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Tags */}
+                      <div className="mb-4">
+                        <p className="text-xs text-primary font-semibold mb-2">KEY FEATURES:</p>
                         <div className="flex flex-wrap gap-2">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-1 text-xs bg-primary/10 text-primary rounded border border-primary/20"
-                            >
-                              {tag}
+                          {project.features.map((feature) => (
+                            <span key={feature} className="text-xs text-muted-foreground">
+                              • {feature}
                             </span>
                           ))}
                         </div>
-                      </a>
-                    ))}
-                </div>
+                      </div>
+
+                      <div className="mb-4">
+                        <p className="text-xs text-primary font-semibold mb-2">TECH STACK:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 text-xs bg-primary/5 text-primary/80 rounded border border-primary/20"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 text-xs bg-primary/10 text-primary rounded border border-primary/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </a>
+                  ))}
               </div>
-            ))}
+            </div>
           </div>
 
           <div className="mt-12 pt-12 border-t border-border text-center">
@@ -335,28 +322,30 @@ export default function Portfolio() {
       {/* Research Section */}
       <section className="py-20 px-4 sm:px-6 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Research Focus</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">Cybersecurity Specializations</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Advanced Persistent Threat (APT) Simulation",
-                desc: "Developing realistic attack scenarios and defense mechanisms",
+                title: "Malware Analysis & Development",
+                desc: "Advanced persistent threat (APT) simulation, reverse engineering",
               },
               {
-                title: "Zero-Day Vulnerability Research",
-                desc: "Focus on popular software and frameworks security analysis",
+                title: "Exploit Development",
+                desc: "Zero-day research, vulnerability analysis, proof-of-concept development",
               },
               {
-                title: "Cross-Platform Security",
-                desc: "Unified security approaches for web and desktop applications",
+                title: "Penetration Testing",
+                desc: "Web application security, network penetration testing, red team operations",
               },
               {
-                title: "Secure Software Development Lifecycle",
-                desc: "Integrating security throughout the development process",
+                title: "Threat Intelligence",
+                desc: "Malware analysis, IOC identification, threat hunting",
               },
-              { title: "Blockchain Security", desc: "Smart contract vulnerability analysis and mitigation" },
-              { title: "DevSecOps Integration", desc: "Security automation in CI/CD pipelines" },
+              {
+                title: "Digital Forensics",
+                desc: "Incident response, memory analysis, disk forensics",
+              },
             ].map((research, idx) => (
               <div key={idx} className="p-6 border border-border rounded-lg bg-card">
                 <h3 className="text-lg font-semibold text-primary mb-2">{research.title}</h3>
