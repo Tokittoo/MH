@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, Github, Linkedin, Mail, Shield, Code2, Zap } from "lucide-react"
+import { ExternalLink, Github, Instagram, Linkedin, Mail, Shield, Code2, Zap } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Portfolio() {
@@ -382,7 +382,13 @@ export default function Portfolio() {
               <Github size={20} /> GitHub
             </a>
             <a
-              href="https://linkedin.com/in/mohamed-hathim"
+              href="mailto:mohamedhathim628@gmail.com"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
+            >
+              <Mail size={20} /> Email
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohamed-hathim"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
@@ -390,10 +396,12 @@ export default function Portfolio() {
               <Linkedin size={20} /> LinkedIn
             </a>
             <a
-              href="mailto:mohamed.hathim@example.com"
+              href="https://www.instagram.com/mohamed7hathim"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
             >
-              <Mail size={20} /> Email
+              <Instagram size={20} /> Instagram
             </a>
           </div>
         </div>
