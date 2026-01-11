@@ -27,6 +27,14 @@ export default function Portfolio() {
       link: "https://github.com/SNAassaignment/ChatServerApp"
     },
     {
+      title: "Advanced desktop security monitoring tool",
+      description: "Real-time system activity monitoring Process behavior analysis and detection Network traffic inspection Automated threat response system Cross-platform compatibility (Windows/Linux/macOS)",
+      features: ["Multi-layer Authentication", "2FA Implementation", "PCI DSS Compliance", "Real-time Fraud Detection"],
+      tech: ["Python", "CustomTkinter", "PyQt5", "SQLite", "PyQt5"],
+      tags: ["Security"],
+      link: "https://github.com/MH786-coder/system-monitor"
+    },
+    {
       title: "Advanced Malware Analysis Toolkit",
       description: "Comprehensive framework with dynamic/static analysis and behavioral detection",
       features: ["Dynamic Analysis Engine", "Static Analysis Module", "Behavioral Detection", "YARA Rule Generation"],
